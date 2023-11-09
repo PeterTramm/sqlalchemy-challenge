@@ -3,7 +3,6 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-
 import datetime as dt
 
 from flask import Flask, jsonify
@@ -221,7 +220,7 @@ def date_range(start,end):
         tobs_dict['Min'] = min
         tobs_dict['Max'] = max
         tobs_dict['Avg'] = avg
-         #Append the dict into the list to be jsonified
+         #Append the dict intogi the list to be jsonified
         tob_summary.append(tobs_dict)
 
     return jsonify(tob_summary)
